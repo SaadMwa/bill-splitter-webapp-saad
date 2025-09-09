@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: slideDown 1s ease;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ffd369;
+  text-shadow: 0 0 15px rgba(255, 211, 105, 0.6);
+}
+
+header p {
+  font-size: 1rem;
+  color: #eee;
+  opacity: 0.85;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+  transform: translateY(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(0px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+
+.card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #ffd369;
+  border-left: 5px solid #ffd369;
+  padding-left: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-group input, 
+.input-group select {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.input-group input:focus, 
+.input-group select:focus {
+  box-shadow: 0 0 8px #ffd369;
+}
+
+.input-group button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ffd369, #ff9f1c);
+  color: #222;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.input-group button:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 211, 105, 0.5);
+}
+
+ul {
+  list-style: none;
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+ul li {
+  background: rgba(255, 255, 255, 0.15);
+  margin-bottom: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  animation: fadeInUp 0.5s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+ul li:hover {
+  transform: scale(1.02);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.result-card {
+  text-align: center;
+}
+
+.result-card button {
+  background: linear-gradient(135deg, #ff6b6b, #ff3d3d);
+  color: #fff;
+  font-size: 1rem;
+}
+
+#results {
+  margin-top: 15px;
+  text-align: left;
+}
+
+#results p {
+  background: rgba(0, 0, 0, 0.3);
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  animation: fadeInUp 0.6s ease;
+}
+
+#calculate {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ffd369, #ff9f1c);
+  color: #222;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.50s ease, box-shadow 0.25s ease;
+}
+
+#calculate:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #ffd369;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #ffd369;
+  border-radius: 4px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.balance-card {
+  padding: 12px 15px;
+  border-radius: 12px;
+  margin: 8px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  animation: fadeInUp 0.6s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.balance-card:hover {
+  transform: translateX(5px) scale(1.02);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+.receive {
+  background: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+  border-left: 5px solid #2ecc71;
+}
+
+.pay {
+  background: hsla(6, 100%, 51%, 0.15);
+  color: #5d0b02;
+  border-left: 5px solid #e74c3c;
+}
+
+.settled {
+  background: rgba(189, 195, 199, 0.2);
+  color: #ecf0f1;
+  border-left: 5px solid #bdc3c7;
+}

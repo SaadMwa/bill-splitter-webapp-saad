@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fair Share - Expense Splitter</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💸 Fair Share</h1>
+      <p>Split expenses fairly with friends & family</p>
+      
+    </header>
+
+
+    <section class="card">
+      <h2>Add Participants</h2>
+      <div class="input-group">
+        <input type="text" id="participantName" placeholder="Enter name..." />
+        <button id="addParticipant">Add</button>
+      </div>
+      <ul id="participantsList"></ul>
+    </section>
+
+    
+    <section class="card">
+      <h2>Add Expense</h2>
+      <div class="input-group">
+        <input type="text" id="expenseDesc" placeholder="Expense description (e.g. Pizza)" />
+        <input type="number" id="expenseAmount" placeholder="Amount" />
+        <select id="payerSelect">
+          <option value="">Who paid?</option>
+        </select>
+        <button id="addExpense">Add Expense</button>
+      </div>
+      <ul id="expensesList"></ul>
+    </section>
+
+    
+    <section class="card result-card">
+      <h2>Settlement</h2>
+      <button id="calculate">Calculate Balances</button>
+      <div id="results"></div>
+    </section>
+  </div>
+
+  <script src="Logic.js"></script>
+</body>
+</html>
